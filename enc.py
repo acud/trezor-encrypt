@@ -27,9 +27,11 @@ plain = input("Enter message: ")
 plain = plain.ljust(256, ' ')
 message = plain.encode()
 
-key = "password"
-res = encrypt(key, message)
+passk = input("Enter Password: ")
+res = encrypt(passk, message)
 print(res.hex())
 
-dec = decrypt(key,res.hex())
+passs = input("Enter Password:")
+
+dec = decrypt(passs,res.hex())
 print(dec)
