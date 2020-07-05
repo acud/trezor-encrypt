@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import binascii
+import getpass
 from trezorlib.tools import parse_path
 from trezorlib import tezos, ui, device
 from trezorlib import messages as proto
@@ -27,7 +28,7 @@ plain = input("Enter message: ")
 plain = plain.ljust(256, ' ')
 message = plain.encode()
 
-passk = input("Enter Password: ")
+passk = getpass.getpass("Enter Password: ")
 res = encrypt(passk, message)
 print(res.hex())
 
