@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 import binascii
 import getpass
-from trezorlib.tools import parse_path
-from trezorlib import tezos, ui, device
-from trezorlib import messages as proto
+from trezorlib import ui, device
 from trezorlib.transport import TransportException  
 from trezorlib.exceptions import TrezorFailure
 from trezorlib.client import TrezorClient
